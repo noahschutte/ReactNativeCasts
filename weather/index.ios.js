@@ -29,9 +29,9 @@ var Weather = React.createClass({
         style={styles.map}>
       </MapView>
       <View style={styles.textWrapper}>
-        <Text style={styles.text}>{this.state.city}</Text>
-        <Text style={styles.text}>{this.state.temperature}</Text>
-        <Text style={styles.text}>{this.state.description}</Text>
+      <Text style={styles.text}>{this.state.city}</Text>
+      <Text style={styles.text}>{this.state.temperature}</Text>
+      <Text style={styles.text}>{this.state.description}</Text>
       </View>
     </View>
   },
@@ -45,7 +45,7 @@ var Weather = React.createClass({
 
     Api(region.latitude, region.longitude)
       .then((data) => {
-        console.log(data);
+        console.log(data)
         this.setState(data);
       });
   }
@@ -64,7 +64,7 @@ var styles = StyleSheet.create({
   },
   textWrapper: {
     flex: 1,
-    alignItems: 'center'
+    alignItems: 'center',
   },
   text: {
     fontSize: 30
